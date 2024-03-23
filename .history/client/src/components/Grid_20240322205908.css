@@ -1,0 +1,53 @@
+.container {
+  text-align: center;
+  height: 90vh;
+  width: 90vw;
+}
+
+.grid {
+  width: 90%;
+  height: 90%;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-gap: 2px;
+}
+
+.box {
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+  border: 1px solid #000;
+}
+
+.box.green {
+  background-color: green;
+}
+
+.box.blue {
+  background-color: blue;
+}
+
+.box.red {
+  background-color: red;
+}
+
+.scoreBar {
+  margin-bottom: 20px;
+}
+@keyframes moveRedColumns {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(100% - 2 * 50px)); /* Assuming each box is 50px wide */
+  }
+}
+
+.red-column {
+  animation: moveRedColumns 2s linear infinite;
+  position: absolute;
+}
+
+/* Rest of the CSS remains the same */
+
+

@@ -1,0 +1,40 @@
+.Grid {
+  background-color: black; /* Set the background of the entire grid to black */
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Adds space between rows */
+  padding: 20px; /* Adds padding around the grid */
+  align-items: center;
+}
+
+.row {
+  display: flex;
+  gap: 10px; /* Adds space between boxes */
+}
+
+.cell {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #000;
+  border-radius: 1rem; /* Makes the border of each box rounded */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.green { 
+  background-color: green;
+}
+
+.blue { background-color: blue; }
+
+.red { background-color: red; }
+
+.clicked { 
+  animation: blink 0.5s linear 3; 
+  /* Ensures that the clicked animation can be applied to a cell with rounded borders and spacing */
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
